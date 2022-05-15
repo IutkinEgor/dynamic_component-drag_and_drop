@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CardComponentInterface } from '../types/card-component.interface';
+import { DynamicComponentInterface } from '../types/dynamic-component.interface';
 
 
 @Component({
@@ -25,14 +25,25 @@ import { CardComponentInterface } from '../types/card-component.interface';
     <span>Component id: {{id}}</span> 
     <br>
     <span>Component position: {{position}}</span>
+    <p>
+    <span><strong>Info from initialization service</strong></span>
+    <br>
+    <span>Symbol: {{symbol}}</span>
+    <br>
+    <span>ShortName: {{shortName}}</span>
+    <br>
+    <span>Discription: {{discription}}</span>
   </div>
   `
 })
-export class Card3Component implements CardComponentInterface {
+export class Card3Component implements DynamicComponentInterface {
 
   @Output() delete: EventEmitter<number> = new EventEmitter<number>();
   @Input() id: number;
   @Input() position: number;
+  @Input() symbol: string;
+  @Input() shortName: string;
+  @Input() discription: string;
 
   constructor() {}
   

@@ -1,15 +1,14 @@
 import { EventEmitter, Type } from '@angular/core';
-import { DynamicComponentInterface } from './dynamic-component.interface';
+import { DynamicComponentCardInterface } from './dynamic-component-card.interface';
 
-
-export class DynamicComponentClass implements DynamicComponentInterface{
+export class DynamicComponentCardClass implements DynamicComponentCardInterface{
 
   readonly component: Type<any>
   id: number;
   position: number;
-  readonly symbol: string;
-  readonly shortName: string;
-  readonly discription: string;
+  symbol: string;
+  shortName: string;
+  discription: string;
   delete: EventEmitter<number>;
   
 
@@ -23,6 +22,11 @@ export class DynamicComponentClass implements DynamicComponentInterface{
     this.symbol = symbol;
     this.shortName = shortName;
     this.discription = discription;
+  }
+
+  //It's Okay
+  onDelete(id: number): void {
+    throw new Error('Method not implemented.');
   }
 
 }                                                       

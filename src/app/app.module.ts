@@ -9,7 +9,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 
 //Dynamic components
 import * as fromDynamicComponents from './dynamic/components/index'
-import { DynamicComponentService } from './dynamic/services/dynamic-component.service';
+import { DynamicComponentCardService } from './dynamic/services/dynamic-component-card.service';
 import { DynamicComponentDirective } from './dynamic/directives/dynamic-component.directive';
 
 @NgModule({
@@ -33,7 +33,7 @@ import { DynamicComponentDirective } from './dynamic/directives/dynamic-componen
     
   ],
   providers: [
-    DynamicComponentService
+    DynamicComponentCardService
   ],
   bootstrap: [AppComponent]
 })
